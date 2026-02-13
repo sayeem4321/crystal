@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crystal Craft BD - The Ultimate Survival Experience</title>
+    <meta name="description"
+        content="Join Crystal Craft BD, the best Minecraft Survival server. Version 1.8.9 - 1.21.11. IP: play.crystalcraftbd.fun">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&family=Rajdhani:wght@500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="background-overlay"></div>
+
+    <nav class="navbar">
+        <!-- Mobile Menu Button (Left on Mobile) -->
+        <div class="mobile-menu-btn"><i class="fa-solid fa-bars"></i></div>
+
+        <a href="/" class="logo">Crystal<span class="highlight">Craft</span>BD</a>
+
+        <ul class="nav-links">
+            <li><a href="/" class="active"><i class="fa-solid fa-house"></i> Home</a></li>
+            <li><a href="/join"><i class="fa-solid fa-play"></i> Join</a></li>
+            <li><a href="/ranks"><i class="fa-solid fa-gem"></i> Ranks</a></li>
+            <li><a href="/vote"><i class="fa-solid fa-check-to-slot"></i> Vote</a></li>
+            <li><a href="/discord"><i class="fa-brands fa-discord"></i> Discord</a></li>
+        </ul>
+
+        <div class="nav-actions">
+            <div class="player-count-badge"><i class="fa-solid fa-user-group"></i> <span id="nav-player-count">0</span>
+            </div>
+
+
+        </div>
+
+
+    </nav>
+
+    <header class="hero">
+        <div class="hero-content">
+            <!-- Updated Title -->
+            <div class="floating-logo-container">
+                <img src="assets/minecraft_title (1).png" alt="Crystal Craft BD Logo" class="floating-logo">
+            </div>
+            <p class="description">Join the ultimate Bangladeshi Minecraft experience with multiple gamemodes, custom
+                features, and an amazing community of players from across Bangladesh.</p>
+
+            <div class="server-ip-box">
+                <div class="ip-label">Server IP:</div>
+                <div class="ip-row">
+                    <div class="ip-address">play.crystalcraftbd.fun</div>
+                    <button class="copy-btn" onclick="copyIp()"><i class="fa-regular fa-copy"></i> Copy</button>
+                </div>
+
+                <div class="stats-grid">
+                    <div class="stat-box">
+                        <span class="stat-value" id="player-count">Loading...</span>
+                        <span class="stat-label">Players Online</span>
+                    </div>
+                    <div class="stat-box">
+                        <span class="stat-value text-green" id="server-status">Online</span>
+                        <span class="stat-label">Server Status</span>
+                    </div>
+                    <div class="stat-box">
+                        <span class="stat-value">1.8.9 - 1.21.11</span>
+                        <span class="stat-label">Version</span>
+                    </div>
+                    <div class="stat-box">
+                        <span class="stat-value" id="server-ping">-- ms</span>
+                        <span class="stat-label">Ping</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hero-buttons">
+                <a href="https://discord.gg/mRB8efgtUN" class="btn btn-lg btn-purple" target="_blank"><i
+                        class="fa-brands fa-discord"></i> Discord
+                    Community</a>
+                <a href="/join" class="btn btn-lg btn-green"><i class="fa-solid fa-play"></i> Join Server Now</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Player Leaderboard Section -->
+    <!-- Active Players Section -->
+    <section class="leaderboard-section">
+        <div class="leaderboard-container">
+            <h2 class="section-title text-center"><span class="highlight">Players</span> Active Right Now</h2>
+            <p class="section-desc text-center">See who is currently playing on Crystal Craft BD</p>
+
+            <div class="leaderboard-wrapper">
+                <div id="players-loading" class="loading-state">
+                    <i class="fa-solid fa-spinner fa-spin"></i> Loading online players...
+                </div>
+
+                <div id="players-empty" class="empty-state" style="display: none;">
+                    <i class="fa-solid fa-ghost"></i> No players online right now.
+                </div>
+
+                <div id="players-list" class="players-list" style="display: none;">
+                    <!-- Player list items will be injected here -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Short Info Section (keeping the landing page populated but brief) -->
+    <section class="features">
+        <div class="feature-card">
+            <i class="fa-solid fa-shield-halved"></i>
+            <h3>Survival Mode</h3>
+            <p>Classic pure survival with land claims and economy.</p>
+        </div>
+        <div class="feature-card">
+            <i class="fa-solid fa-trophy"></i>
+            <h3>Competitive</h3>
+            <p>Tournaments, PvP events, and leaderboards.</p>
+        </div>
+        <div class="feature-card">
+            <i class="fa-solid fa-users"></i>
+            <h3>Community</h3>
+            <p>Join thousands of other Bangladeshi players.</p>
+        </div>
+    </section>
+
+    </footer>
+
+
+
+
+
+
+
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>

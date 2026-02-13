@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ranks - Crystal Craft BD</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&family=Rajdhani:wght@500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="background-overlay"></div>
+
+    <nav class="navbar">
+        <!-- Mobile Menu Button (Left on Mobile) -->
+        <div class="mobile-menu-btn"><i class="fa-solid fa-bars"></i></div>
+
+        <a href="/" class="logo">Crystal<span class="highlight">Craft</span>BD</a>
+
+        <ul class="nav-links">
+            <li><a href="/"><i class="fa-solid fa-house"></i> Home</a></li>
+            <li><a href="/join"><i class="fa-solid fa-play"></i> Join</a></li>
+            <li><a href="/ranks" class="active"><i class="fa-solid fa-gem"></i> Ranks</a></li>
+            <li><a href="/vote"><i class="fa-solid fa-check-to-slot"></i> Vote</a></li>
+            <li><a href="/discord"><i class="fa-brands fa-discord"></i> Discord</a></li>
+        </ul>
+
+        <div class="nav-actions">
+            <div class="player-count-badge"><i class="fa-solid fa-user-group"></i> <span id="nav-player-count">0</span>
+            </div>
+            <!-- Auth Buttons Removed -->
+
+        </div>
+
+
+    </nav>
+
+    <div class="page-container">
+        <header class="page-header">
+            <div class="page-icon"><i class="fa-solid fa-cube"></i></div>
+            <h1 class="page-title">Server Ranks</h1>
+            <p class="page-subtitle">Unlock exclusive features and support the server with our premium ranks</p>
+        </header>
+
+        <section class="ranks-content">
+            <div class="ranks-grid">
+                <!-- VIP Rank -->
+                <div class="rank-card vip">
+                    <div class="rank-name">VIP</div>
+                    <div class="rank-price"><span class="rank-currency">TK</span> 50</div>
+                    <div class="rank-actions">
+                        <button class="btn btn-sm btn-yellow-outline rank-details-btn" data-rank="vip">Details</button>
+                        <button class="btn btn-sm btn-yellow rank-btn">Buy Now</button>
+                    </div>
+                </div>
+
+                <!-- MVP Rank -->
+                <div class="rank-card mvp">
+                    <div class="rank-name">MVP</div>
+                    <div class="rank-price"><span class="rank-currency">TK</span> 75</div>
+                    <div class="rank-actions">
+                        <button class="btn btn-sm btn-blue-outline rank-details-btn" data-rank="mvp">Details</button>
+                        <button class="btn btn-sm btn-blue rank-btn">Buy Now</button>
+                    </div>
+                </div>
+
+                <!-- GOAT Rank -->
+                <div class="rank-card goat">
+                    <div class="rank-name">GOAT</div>
+                    <div class="rank-price"><span class="rank-currency">TK</span> 140</div>
+                    <div class="rank-actions">
+                        <button class="btn btn-sm btn-red-outline rank-details-btn" data-rank="goat">Details</button>
+                        <button class="btn btn-sm btn-red rank-btn">Buy Now</button>
+                    </div>
+                </div>
+
+                <!-- CRYSTAL Rank -->
+                <div class="rank-card crystal">
+                    <div class="rank-name">CRYSTAL</div>
+                    <div class="rank-price"><span class="rank-currency">TK</span> 180</div>
+                    <div class="rank-actions">
+                        <button class="btn btn-sm btn-purple-outline rank-details-btn"
+                            data-rank="crystal">Details</button>
+                        <button class="btn btn-sm btn-purple rank-btn">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+    </div>
+
+
+    <!-- Rank Modals -->
+    <!-- VIP Modal -->
+    <div id="modal-vip" class="rank-modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2 class="modal-title section-title text-yellow">VIP Rank</h2>
+            <div class="modal-body">
+                <ul class="rank-benefits-list">
+                    <li><i class="fa-solid fa-cube text-yellow"></i> 2000 Claim Blocks</li>
+                    <li><i class="fa-solid fa-coins text-yellow"></i> 2000 Economy Balance</li>
+                    <li><i class="fa-solid fa-box-open text-yellow"></i> VIP Kit</li>
+                </ul>
+                <button class="btn btn-block btn-yellow-outline mb-2 kit-preview-btn" data-kit="vip">Preview
+                    Kit</button>
+
+                <button class="btn btn-block btn-yellow">Buy VIP Now</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- MVP Modal -->
+    <div id="modal-mvp" class="rank-modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2 class="modal-title section-title text-blue">MVP Rank</h2>
+            <div class="modal-body">
+                <ul class="rank-benefits-list">
+                    <li><i class="fa-solid fa-cube text-blue"></i> 4000 Claim Blocks</li>
+                    <li><i class="fa-solid fa-coins text-blue"></i> 4000 Economy Balance</li>
+                    <li><i class="fa-solid fa-box-open text-blue"></i> MVP Kit</li>
+                </ul>
+                <button class="btn btn-block btn-blue-outline mb-2 kit-preview-btn" data-kit="mvp">Preview
+                    Kit</button>
+
+                <button class="btn btn-block btn-blue">Buy MVP Now</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- GOAT Modal -->
+    <div id="modal-goat" class="rank-modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2 class="modal-title section-title text-red">GOAT Rank</h2>
+            <div class="modal-body">
+                <ul class="rank-benefits-list">
+                    <li><i class="fa-solid fa-cube text-red"></i> 8000 Claim Blocks</li>
+                    <li><i class="fa-solid fa-coins text-red"></i> 8000 Economy Balance</li>
+                    <li><i class="fa-solid fa-box-open text-red"></i> GOAT Kit</li>
+                </ul>
+                <button class="btn btn-block btn-red-outline mb-2 kit-preview-btn" data-kit="goat">Preview
+                    Kit</button>
+
+                <button class="btn btn-block btn-red">Buy GOAT Now</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- CRYSTAL Modal -->
+    <div id="modal-crystal" class="rank-modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2 class="modal-title section-title text-purple">CRYSTAL Rank</h2>
+            <div class="modal-body">
+                <ul class="rank-benefits-list">
+                    <li><i class="fa-solid fa-cube text-purple"></i> 12000 Claim Blocks</li>
+                    <li><i class="fa-solid fa-coins text-purple"></i> 12000 Economy Balance</li>
+                    <li><i class="fa-solid fa-box-open text-purple"></i> CRYSTAL Kit</li>
+                </ul>
+                <button class="btn btn-block btn-purple-outline mb-2 kit-preview-btn" data-kit="crystal">Preview
+                    Kit</button>
+
+                <button class="btn btn-block btn-purple">Buy CRYSTAL Now</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Kit Preview Modals -->
+    <div id="modal-kit-vip" class="rank-modal kit-modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2 class="modal-title section-title text-yellow">VIP Kit Preview</h2>
+            <div class="kit-image-container glow-yellow">
+                <img src="assets/VIP.png" alt="VIP Kit" class="kit-image">
+            </div>
+            <p class="kit-enchant-desc text-yellow">Armour and tools have Enchant Level III</p>
+        </div>
+    </div>
+
+    <div id="modal-kit-mvp" class="rank-modal kit-modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2 class="modal-title section-title text-blue">MVP Kit Preview</h2>
+            <div class="kit-image-container glow-blue">
+                <img src="assets/MVP.png" alt="MVP Kit" class="kit-image">
+            </div>
+            <p class="kit-enchant-desc text-blue">Armour and tools have Enchant Level II</p>
+        </div>
+    </div>
+
+    <div id="modal-kit-goat" class="rank-modal kit-modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2 class="modal-title section-title text-red">GOAT Kit Preview</h2>
+            <div class="kit-image-container glow-red">
+                <img src="assets/GOAT.png" alt="GOAT Kit" class="kit-image">
+            </div>
+            <p class="kit-enchant-desc text-red">Armour and tools have Enchant Level III</p>
+        </div>
+    </div>
+
+    <div id="modal-kit-crystal" class="rank-modal kit-modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2 class="modal-title section-title text-purple">CRYSTAL Kit Preview</h2>
+            <div class="kit-image-container glow-purple">
+                <img src="assets/CRYSTAL.png" alt="CRYSTAL Kit" class="kit-image">
+            </div>
+            <p class="kit-enchant-desc text-purple">Armour and tools have Enchant Level IV</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Crystal Craft BD. All rights reserved.</p>
+    </footer>
+
+
+
+
+
+
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
